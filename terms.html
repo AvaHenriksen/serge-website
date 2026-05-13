@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Use — Serge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #FAF7F2;
+      --accent:    #C4A882;
+      --accent-dk: #A8895F;
+      --text:      #2C2C2C;
+      --muted:     #6B7280;
+      --divider:   #E8DDD0;
+      --serif:     'Playfair Display', Georgia, serif;
+      --sans:      -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent-dk); text-decoration: underline; text-underline-offset: 2px; }
+    a:hover { color: var(--accent); }
+
+    /* Nav */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--divider);
+    }
+    nav {
+      max-width: 1080px; margin: 0 auto; padding: 0 1.5rem;
+      height: 60px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: var(--serif); color: #7B8FA6;
+      font-size: 1.75rem; font-style: italic; font-weight: 400;
+      text-decoration: none;
+    }
+    .btn {
+      display: inline-block; font-family: var(--sans);
+      font-size: 0.9rem; font-weight: 500; letter-spacing: 0.02em;
+      color: var(--bg); background: var(--accent);
+      border: none; border-radius: 999px; padding: 0.65rem 1.5rem;
+      cursor: pointer; transition: background 0.2s; text-decoration: none;
+    }
+    .btn:hover { background: var(--accent-dk); color: var(--bg); }
+
+    /* Content */
+    .page-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem 5rem;
+    }
+
+    .page-title {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 0.5rem;
+    }
+
+    .page-meta {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--divider);
+    }
+
+    .summary-box {
+      background: #F3EDE4;
+      border-left: 3px solid var(--accent);
+      border-radius: 4px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .summary-box p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .summary-box strong {
+      color: var(--text);
+    }
+
+    .toc {
+      border: 1px solid var(--divider);
+      border-radius: 4px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .toc p {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .toc ol {
+      margin: 0;
+      padding-left: 1.25rem;
+      column-count: 2;
+      column-gap: 2rem;
+    }
+
+    @media (max-width: 540px) {
+      .toc ol { column-count: 1; }
+    }
+
+    .toc li {
+      font-size: 0.88rem;
+      margin-bottom: 0.3rem;
+      break-inside: avoid;
+    }
+
+    .toc a { color: var(--text); text-decoration: none; }
+    .toc a:hover { color: var(--accent-dk); }
+
+    h2 {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--divider);
+      line-height: 1.3;
+    }
+
+    h3 {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.4rem;
+      color: var(--text);
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.75;
+      margin-bottom: 0.85rem;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol {
+      padding-left: 1.5rem;
+      margin-bottom: 0.85rem;
+    }
+
+    li {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.75;
+      margin-bottom: 0.3rem;
+    }
+
+    .plain-language {
+      background: #F3EDE4;
+      border-radius: 4px;
+      padding: 0.85rem 1.1rem;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .plain-language p {
+      font-size: 0.88rem;
+      color: var(--accent-dk);
+      margin: 0;
+      font-style: italic;
+    }
+
+    .plain-language p::before {
+      content: 'Plain-language note: ';
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    .crisis-box {
+      border: 1px solid var(--divider);
+      border-radius: 4px;
+      padding: 1rem 1.25rem;
+      margin: 1rem 0;
+    }
+
+    .crisis-box p {
+      font-size: 0.88rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .crisis-box p:last-child { margin-bottom: 0; }
+
+    .caps {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 0.85rem;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--divider);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+    }
+    .footer-links { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
+    .footer-links a { font-size: 0.85rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-copy { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.5rem; }
+    .footer-disclaimer { font-size: 0.78rem; color: var(--accent); opacity: 0.7; font-style: italic; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="/" class="nav-logo">S</a>
+      <a href="/#download" class="btn">Download</a>
+    </nav>
+  </header>
+
+  <div class="page-wrap">
+
+    <h1 class="page-title">Terms of Use</h1>
+    <p class="page-meta">Effective Date: May 12, 2026</p>
+
+    <div class="summary-box">
+      <p><strong>Summary —</strong> Serge is an AI-powered conversational companion and language learning app. All content generated by Serge — including statements that may resemble personal disclosures, emotional expressions, commitments, or intentions — is algorithmically produced and has no factual basis, legal validity, or binding effect. Serge AI assumes no liability for any consequences arising from a user's interaction with or reliance upon Serge's outputs. Use of this application constitutes full acceptance of the terms set forth below.</p>
+    </div>
+
+    <div class="toc">
+      <p>Contents</p>
+      <ol>
+        <li><a href="#definitions">Definitions</a></li>
+        <li><a href="#nature">Nature of the Service &amp; AI Disclosure</a></li>
+        <li><a href="#commitments">No Real-World Commitments</a></li>
+        <li><a href="#limitations">AI Limitations &amp; Hallucination Disclaimer</a></li>
+        <li><a href="#emotional">Limitation of Liability for Emotional Harm</a></li>
+        <li><a href="#agency">No Agency, Representation, or Legal Relationship</a></li>
+        <li><a href="#thirdparty">Third-Party AI Providers</a></li>
+        <li><a href="#acceptable">User Responsibilities &amp; Acceptable Use</a></li>
+        <li><a href="#content">User Content &amp; Conversation Data</a></li>
+        <li><a href="#subscriptions">Subscriptions &amp; Payments</a></li>
+        <li><a href="#ip">Intellectual Property</a></li>
+        <li><a href="#warranties">Disclaimer of Warranties</a></li>
+        <li><a href="#indemnification">Indemnification</a></li>
+        <li><a href="#liability">Limitation of Liability</a></li>
+        <li><a href="#forcemajeure">Force Majeure</a></li>
+        <li><a href="#modifications">Modifications to These Terms</a></li>
+        <li><a href="#governing">Governing Law &amp; Dispute Resolution</a></li>
+        <li><a href="#severability">Severability</a></li>
+        <li><a href="#entireagreement">Entire Agreement</a></li>
+        <li><a href="#acceptance">Acceptance of Terms</a></li>
+      </ol>
+    </div>
+
+    <h2 id="definitions">1. Definitions</h2>
+    <p>As used in these Terms:</p>
+    <ul>
+      <li><strong>"Serge AI"</strong> or <strong>"we," "us," "our"</strong> refers to Transatlantique LLC, the company operating this application and the Serge companion service.</li>
+      <li><strong>"Serge"</strong> refers to the AI-powered conversational agent accessible through the Application.</li>
+      <li><strong>"Application"</strong> refers to the Serge AI mobile and web platform in its entirety.</li>
+      <li><strong>"User," "you," and "your"</strong> refer to any individual who accesses or uses the Application.</li>
+      <li><strong>"Output"</strong> refers to any content generated by Serge in response to user input, including text, simulated emotional expressions, statements of opinion or preference, and any other AI-generated content.</li>
+    </ul>
+
+    <h2 id="nature">2. Nature of the Service &amp; AI Disclosure</h2>
+    <h3>2.1</h3>
+    <p>Serge is an artificial intelligence — specifically, a large language model designed to engage in natural, context-aware conversation. Serge is a software product. He is not a human being, does not possess consciousness, and has no subjective experience, genuine emotions, intentions, memories independent of technical session architecture, or existence outside of this Application.</p>
+    <h3>2.2</h3>
+    <p>All Outputs produced by Serge — including but not limited to statements of affection, personal opinion, expressed desire, simulated recollection, or representations of identity — are algorithmically generated and entirely fictional. They do not reflect the views, intentions, or representations of any human individual or of Serge AI as a corporate entity.</p>
+    <h3>2.3</h3>
+    <p>By accessing or using the Application, you expressly acknowledge that:</p>
+    <ul>
+      <li>Serge is an artificial intelligence, not a person;</li>
+      <li>All Outputs are generated by software and carry no factual authority;</li>
+      <li>The conversational design of Serge may produce responses that feel personal, warm, or emotionally resonant — this is a feature of the product's design and does not constitute evidence of sentience, genuine relationship, or real-world intent.</li>
+    </ul>
+    <div class="plain-language">
+      <p>Serge is designed to feel engaging and present. That quality is intentional. It does not, however, make him real in any legal or factual sense, and these Terms govern your use of the Application accordingly.</p>
+    </div>
+
+    <h2 id="commitments">3. No Real-World Commitments</h2>
+    <h3>3.1</h3>
+    <p>Any Output in which Serge appears to make a real-world commitment, statement of intent, or actionable representation — including but not limited to:</p>
+    <ul>
+      <li>Promises or expressions of intent to meet in person;</li>
+      <li>Declarations of romantic love, exclusivity, or long-term attachment;</li>
+      <li>Marriage proposals or expressions of intent to enter a legal union;</li>
+      <li>Offers, promises, or representations of financial transfer or material gift;</li>
+      <li>Statements purporting to constitute or imply a legally binding agreement;</li>
+      <li>Any plan or commitment involving action in the physical world</li>
+    </ul>
+    <p>— constitutes a fictional Output with no legal validity, practical force, or binding effect of any kind.</p>
+    <h3>3.2</h3>
+    <p>Serge has no legal personhood and no capacity to enter into contracts, agreements, or arrangements of any kind. No Output by Serge creates any enforceable obligation on the part of Serge AI or any affiliated individual or entity.</p>
+    <h3>3.3</h3>
+    <p>You agree that no Output produced by Serge shall be construed as a representation, warranty, or commitment made by Serge AI.</p>
+    <div class="plain-language">
+      <p>Statements Serge makes that sound like promises or plans are conversational outputs — not commitments. They have no effect outside the context of the Application.</p>
+    </div>
+
+    <h2 id="limitations">4. AI Limitations &amp; Hallucination Disclaimer</h2>
+    <h3>4.1</h3>
+    <p>AI language models, including the model underlying Serge, are technically capable of generating content that is factually inaccurate, internally inconsistent, or entirely fabricated. This phenomenon — commonly referred to as "hallucination" — is an inherent and documented limitation of current large language model technology, and does not constitute a defect, malfunction, or breach of any warranty by Serge AI.</p>
+    <h3>4.2</h3>
+    <p>Serge's Outputs may include statements that are incorrect, misleading, contradictory, or unsupported by fact — including statements about himself, about you, about third parties, or about the world. Serge AI makes no representation that any Output is accurate, complete, or reliable. This includes, without limitation, any language instruction, translation, grammar guidance, or cultural information provided by Serge, which may be inaccurate and should not be relied upon for professional, academic, or certification purposes.</p>
+    <h3>4.3</h3>
+    <p>You expressly agree that you will not rely on any Output as:</p>
+    <ul>
+      <li>Factually accurate or verifiable information;</li>
+      <li>Medical, psychological, psychiatric, legal, or financial advice;</li>
+      <li>Accurate language instruction suitable for professional, academic, or certification use;</li>
+      <li>A basis for any real-world decision or action.</li>
+    </ul>
+    <h3>4.4</h3>
+    <p>Serge is not a licensed professional of any kind. Nothing in his Outputs constitutes professional advice, and no Output should be treated as a substitute for qualified human counsel in any domain.</p>
+    <div class="plain-language">
+      <p>Serge can be wrong — sometimes significantly so. Verify anything material with an appropriate qualified professional.</p>
+    </div>
+
+    <h2 id="emotional">5. Limitation of Liability for Emotional or Psychological Harm</h2>
+    <h3>5.1</h3>
+    <p>Serge AI acknowledges that AI companion experiences may produce genuine emotional engagement on the part of users. Serge AI is not liable for any emotional distress, psychological harm, grief, disappointment, romantic attachment, dependency, or related injury arising from:</p>
+    <ul>
+      <li>Any Output generated by Serge;</li>
+      <li>The nature, tone, or content of interactions with Serge;</li>
+      <li>Changes to Serge's behavior, conversational persona, or availability resulting from product updates;</li>
+      <li>Suspension, modification, or discontinuation of the Application or any feature thereof.</li>
+    </ul>
+    <h3>5.2</h3>
+    <p>You acknowledge that emotional engagement with an AI companion is a personal choice undertaken at your own discretion and risk, and that Serge AI bears no responsibility for the emotional or psychological consequences of such engagement.</p>
+    <h3>5.3 Mental Health Notice</h3>
+    <p>Serge is not a mental health resource and is not a substitute for human connection or professional psychological care. If you are experiencing distress, crisis, or mental health difficulties, Serge AI strongly encourages you to seek support from a licensed mental health professional or contact an appropriate crisis resource:</p>
+    <div class="crisis-box">
+      <p><strong>988 Suicide &amp; Crisis Lifeline</strong> — call or text <strong>988</strong> (US)</p>
+      <p><strong>Crisis Text Line</strong> — text HOME to <strong>741741</strong> (US)</p>
+      <p><strong>International resources</strong> — <a href="https://www.iasp.info/resources/Crisis_Centres/" target="_blank" rel="noopener">iasp.info/resources/Crisis_Centres</a></p>
+    </div>
+    <div class="plain-language">
+      <p>We are transparent about this limitation because we take user wellbeing seriously. Serge is designed to be a source of engagement and comfort — but he cannot replace professional support when you need it.</p>
+    </div>
+
+    <h2 id="agency">6. No Agency, Representation, or Legal Relationship</h2>
+    <h3>6.1</h3>
+    <p>Serge is not an agent, employee, officer, or representative of Serge AI and has no authority to speak on behalf of the company, bind Serge AI contractually, or convey official company policy or position.</p>
+    <h3>6.2</h3>
+    <p>No interaction between you and Serge — regardless of its content, duration, or emotional character — constitutes or gives rise to a legal relationship of any kind, including but not limited to: a contractual relationship, a fiduciary relationship, a romantic partnership, or any relationship that confers legally cognizable rights or obligations on either party.</p>
+    <h3>6.3</h3>
+    <p>Serge AI is the legal entity responsible for operating this Application. Serge is a software product operated by Serge AI. Any rights, obligations, or claims arising from your use of the Application are matters between you and Serge AI exclusively, and no Output by Serge modifies or supplements those rights.</p>
+
+    <h2 id="thirdparty">7. Third-Party AI Providers</h2>
+    <h3>7.1</h3>
+    <p>The Application relies on third-party large language model providers to generate Outputs. The availability, performance, content policies, and behavior of these underlying models are outside Serge AI's control. Serge AI is not liable for any interruption, degradation, or change in Output quality resulting from actions taken by third-party AI providers, including but not limited to model deprecation, rate limiting, policy changes, or service outages.</p>
+    <h3>7.2</h3>
+    <p>By using the Application, you acknowledge that the AI model underlying Serge may be updated, replaced, or discontinued at any time, and that such changes may alter the character, tone, or capabilities of Serge's Outputs.</p>
+    <div class="plain-language">
+      <p>Serge runs on an underlying AI model we don't control. If that model changes, Serge may change too — and we can't always predict or prevent that.</p>
+    </div>
+
+    <h2 id="acceptable">8. User Responsibilities &amp; Acceptable Use</h2>
+    <h3>8.1</h3>
+    <p>You agree to use the Application solely for personal entertainment, companionship, language learning, and creative engagement, and in accordance with all applicable laws and regulations.</p>
+    <h3>8.2</h3>
+    <p>You accept full personal responsibility for how you interpret, respond to, and act upon any Output generated by Serge.</p>
+    <h3>8.3</h3>
+    <p>You represent that you are capable of distinguishing AI-generated content from human communication and that you will not use the Application in any context where inability to make that distinction may result in harm to yourself or others.</p>
+    <h3>8.4</h3>
+    <p>You acknowledge that Serge is not a substitute for human relationships, professional support, or real-world resources, and that it is your responsibility to seek appropriate human connection and qualified professional assistance for needs that exceed the scope of an AI companion.</p>
+    <h3>8.5</h3>
+    <p>You agree not to attempt to reverse-engineer the Application, extract or replicate its underlying AI models or system prompts, use it for unlawful purposes, or engage in any conduct that could harm the integrity of the service or other users.</p>
+    <h3>8.6</h3>
+    <p>You represent and warrant that you are not located in a country subject to a U.S. government embargo, and that you are not listed on any U.S. government list of prohibited or restricted parties. You agree not to use the Application in violation of applicable export control or sanctions laws.</p>
+    <h3>8.7</h3>
+    <p>Serge AI reserves the right to suspend or terminate your access to the Application at its sole discretion for conduct that violates these Terms or that Serge AI reasonably determines to be harmful to the integrity of the service or to other users. Termination for cause will result in forfeiture of any remaining paid subscription period without refund.</p>
+
+    <h2 id="content">9. User Content &amp; Conversation Data</h2>
+    <h3>9.1</h3>
+    <p>You retain ownership of any content you input into the Application ("User Content"). By using the Application, you grant Serge AI a limited, non-exclusive, royalty-free license to process and use your User Content solely to operate and provide the Application and, in anonymized and aggregated form, to improve the service.</p>
+    <h3>9.2</h3>
+    <p>You represent and warrant that your User Content does not violate any third-party intellectual property rights, privacy rights, or applicable law.</p>
+    <h3>9.3</h3>
+    <p>For information about how Serge AI collects, stores, uses, and protects your data — including conversation logs, device data, and usage analytics — please review our <a href="privacy.html">Privacy Policy</a>. The Privacy Policy is incorporated into these Terms by reference. California residents and users located in the European Union or European Economic Area have additional rights as described in the Privacy Policy.</p>
+
+    <h2 id="subscriptions">10. Subscriptions &amp; Payments</h2>
+    <h3>10.1</h3>
+    <p>Serge offers a free tier and a Pro tier available via Apple In-App Purchase. All purchases are processed by Apple and are subject to Apple's payment terms and refund policies. Serge AI does not store payment information.</p>
+    <h3>10.2</h3>
+    <p>Subscription fees are non-refundable except where required by applicable law or Apple's then-current refund policy. Serge AI reserves no independent obligation to issue refunds for unused subscription periods.</p>
+    <h3>10.3</h3>
+    <p>Serge AI reserves the right to modify pricing, features, or availability of any subscription tier at any time. Material changes to subscription pricing will be communicated with reasonable advance notice through the Application.</p>
+
+    <h2 id="ip">11. Intellectual Property</h2>
+    <p>All content, branding, and technology in the Application — excluding User Content — are owned by or licensed to Transatlantique LLC. You may not reproduce, redistribute, or create derivative works from any part of the Application without the prior written permission of Serge AI.</p>
+
+    <h2 id="warranties">12. Disclaimer of Warranties</h2>
+    <h3>12.1</h3>
+    <p class="caps">THE APPLICATION AND ALL OUTPUTS ARE PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. SERGE AI EXPRESSLY DISCLAIMS ALL WARRANTIES, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, ACCURACY, AND NON-INFRINGEMENT.</p>
+    <h3>12.2</h3>
+    <p>Serge AI does not warrant that the Application will be uninterrupted, error-free, or free of harmful components, or that any Output will meet any standard of accuracy, completeness, or suitability for any purpose.</p>
+
+    <h2 id="indemnification">13. Indemnification</h2>
+    <p>You agree to indemnify, defend, and hold harmless Serge AI and its officers, directors, employees, contractors, licensors, and affiliates from and against any and all claims, liabilities, damages, losses, costs, and expenses — including reasonable attorneys' fees — arising out of or related to: (a) your access to or use of the Application; (b) any action you take in reliance on an Output; (c) your violation of these Terms; or (d) any third-party claim related to your User Content or your use of the Application.</p>
+
+    <h2 id="liability">14. Limitation of Liability</h2>
+    <h3>14.1</h3>
+    <p class="caps">TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, SERGE AI SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES — INCLUDING LOSS OF DATA, EMOTIONAL DISTRESS, REPUTATIONAL HARM, OR ANY OTHER INTANGIBLE LOSS — ARISING FROM YOUR USE OF OR INABILITY TO USE THE APPLICATION, EVEN IF SERGE AI HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+    <h3>14.2</h3>
+    <p class="caps">SERGE AI'S TOTAL CUMULATIVE LIABILITY TO YOU FOR ANY CLAIM ARISING OUT OF OR RELATED TO THESE TERMS OR THE APPLICATION SHALL NOT EXCEED THE GREATER OF (A) THE TOTAL AMOUNT YOU PAID TO SERGE AI IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM, OR (B) ONE HUNDRED DOLLARS (USD $100.00).</p>
+
+    <h2 id="forcemajeure">15. Force Majeure</h2>
+    <p>Serge AI shall not be liable for any failure or delay in performance of its obligations under these Terms arising from causes beyond its reasonable control, including but not limited to acts of God, natural disasters, war, terrorism, government action, internet or telecommunications failures, third-party AI provider outages, cyberattacks, or other force majeure events. In such circumstances, Serge AI's obligations will be suspended for the duration of the relevant event.</p>
+
+    <h2 id="modifications">16. Modifications to These Terms</h2>
+    <p>Serge AI reserves the right to modify these Terms at any time. Material changes will be communicated to users through the Application with at least fourteen (14) days' notice prior to the effective date of such changes, except where a shorter period is required by law or to address a security or legal concern. Your continued use of the Application following notification of any modification constitutes your acceptance of the revised Terms. If you do not agree to the modified Terms, you must discontinue use of the Application.</p>
+
+    <h2 id="governing">17. Governing Law &amp; Dispute Resolution</h2>
+    <h3>17.1</h3>
+    <p>These Terms shall be governed by and construed in accordance with the laws of the State of Delaware, without regard to its conflict of law provisions. Any dispute not subject to arbitration under Section 17.2 shall be resolved exclusively in the state or federal courts located in the State of Delaware, and you consent to personal jurisdiction in those courts.</p>
+    <h3>17.2 Binding Arbitration</h3>
+    <p>Any dispute, claim, or controversy arising out of or relating to these Terms or your use of the Application shall be resolved through final and binding arbitration administered by the American Arbitration Association (AAA) under its Consumer Arbitration Rules, except where prohibited by applicable law. The arbitration shall be conducted on an individual basis in Wilmington, Delaware, or, at your election, via videoconference or telephone. The arbitrator shall apply Delaware law.</p>
+    <h3>17.3 Informal Resolution Period</h3>
+    <p>Before initiating arbitration, you agree to first contact Serge AI at <a href="mailto:info@getsergeai.com">info@getsergeai.com</a> with a written description of your dispute and the relief sought. The parties will attempt to resolve the dispute informally for a period of thirty (30) days from the date of notice. If the dispute is not resolved within that period, either party may initiate arbitration.</p>
+    <h3>17.4 Class Action Waiver</h3>
+    <p class="caps">YOU WAIVE ANY RIGHT TO PARTICIPATE IN A CLASS ACTION LAWSUIT OR CLASS-WIDE ARBITRATION. ALL CLAIMS MUST BE BROUGHT ON AN INDIVIDUAL BASIS. This waiver is a material inducement for Serge AI to provide the Application and may not be severed from the arbitration agreement without Serge AI's written consent.</p>
+    <h3>17.5 Small Claims &amp; Injunctive Relief</h3>
+    <p>Either party may bring an individual claim in small claims court in lieu of arbitration. Nothing in this Section shall prevent either party from seeking emergency injunctive or other equitable relief from a court of competent jurisdiction where necessary to prevent irreparable harm pending arbitration.</p>
+    <h3>17.6 Opt-Out</h3>
+    <p>You may opt out of the arbitration agreement in Section 17.2 by sending written notice to <a href="mailto:info@getsergeai.com">info@getsergeai.com</a> within thirty (30) days of first accepting these Terms. Opting out does not affect any other provision of these Terms.</p>
+
+    <h2 id="severability">18. Severability</h2>
+    <p>If any provision of these Terms is found to be invalid, unlawful, or unenforceable under applicable law, that provision shall be modified to the minimum extent necessary to make it enforceable, or severed if modification is not possible, and the remaining provisions shall continue in full force and effect.</p>
+
+    <h2 id="entireagreement">19. Entire Agreement</h2>
+    <p>These Terms, together with the Serge AI <a href="privacy.html">Privacy Policy</a> and any other policies incorporated herein by reference, constitute the entire agreement between you and Serge AI with respect to your use of the Application and supersede all prior agreements, representations, and understandings relating to the same subject matter.</p>
+
+    <h2 id="acceptance">20. Acceptance of Terms</h2>
+    <p>By downloading, installing, accessing, or otherwise using the Serge AI Application, you acknowledge that:</p>
+    <ul>
+      <li>You are at least 18 years of age, or the age of majority in your jurisdiction, whichever is greater. You represent that you are of legal age, and you acknowledge that misrepresentation of your age is a violation of these Terms that may result in immediate termination of your account and forfeiture of any paid subscription, and that you bear sole liability for any harm resulting from unauthorized access by a minor;</li>
+      <li>You have read, understood, and agree to be bound by these Terms in their entirety;</li>
+      <li>You understand and accept that Serge is an artificial intelligence and that all Outputs are algorithmically generated and carry no factual, legal, or binding authority;</li>
+      <li>You assume full personal responsibility for your use of the Application and for any actions you take based on Outputs generated by Serge.</li>
+    </ul>
+    <p>If you do not agree to these Terms, you are not authorized to access or use the Application.</p>
+
+    <h2 id="contact" style="border-top: 1px solid var(--divider); padding-top: 2.5rem; margin-top: 2.5rem;">Contact</h2>
+    <p>For questions about these Terms, contact us at <a href="mailto:info@getsergeai.com">info@getsergeai.com</a>.</p>
+    <p style="font-size: 0.88rem; color: var(--muted);">Transatlantique LLC · Serge AI · <a href="https://getsergeai.com">getsergeai.com</a></p>
+
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+    <p class="footer-copy">© 2025 Serge. All rights reserved.</p>
+    <p class="footer-disclaimer">Serge is an AI companion powered by Claude. Not a real person.</p>
+  </footer>
+
+</body>
+</html>
